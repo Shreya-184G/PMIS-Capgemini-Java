@@ -1,1 +1,115 @@
 //Date : 26/10/2026 : Monday
+
+// DateExplorer
+
+/*
+// Ex.1]
+import java.time.LocalDate;
+import java.util.*;
+public class DateExplorer{
+    public static void main (String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the date: ");//yyyy-dd-mm format
+        String date = sc.next();
+        LocalDate now = LocalDate.parse(date);
+        System.out.println("Date: "+now);
+        
+            for(int i = 1; i <= 4; i++){
+                System.out.println("Enter choice : ");
+                int choice = sc.nextInt();
+                
+                switch(choice){  
+                case 1 : //to look back by a number of months specified by the user
+                LocalDate pastDate = now.minusMonths(50);
+                System.out.println("PastDate: "+pastDate);
+                break;
+                case 2 :
+                int Month = now.getMonthValue();
+                System.out.println("Month : "+Month);
+                break;
+                case 3 : 
+                int year = now.getYear();
+                System.out.println("Year: "+year);
+                if(year %4==0 || year %100 !=0 && year % 400 == 0){
+                    System.out.println("Leap Year");
+                }else{
+                    System.out.println("Not a Leap Year");
+                }
+                break;
+                case 4 : 
+                //int dayOfWeek = now.getDayOfWeek();
+                //System.out.println("Day of week: "+dayOfWeek);
+                break;
+                default: System.out.println("Exit ");
+                break;
+            }            
+        }
+    }
+} */
+
+// DateTime
+/* 
+//Ex.1]
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Set;
+
+class DateTime{
+    public static void main(String[] args) {
+        /* LocalDateTime now = LocalDateTime.now();
+        System.out.println(now);
+        LocalDateTime customDate = LocalDateTime.parse("2026-10-26T11:37:04.225730100");
+        System.out.println(customDate); */
+        /* ZonedDateTime now = ZonedDateTime.now();
+        System.out.println(now); */
+
+        /* 
+        Set<String> availableZones = ZoneId .getAvailableZoneIds();
+        availableZones.forEach(System.out::println);
+    }     
+} */
+
+//Ex.2]
+ /* import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Set;
+
+class DateTime{
+    public static void main(String[] args) {
+        /* LocalDateTime now = LocalDateTime.now();
+        System.out.println(now);
+        LocalDateTime customDate = LocalDateTime.parse("2026-10-26T11:37:04.225730100");
+        System.out.println(customDate); */
+        /* ZonedDateTime now = ZonedDateTime.now();
+        System.out.println(now); */
+
+        /* 
+        Set<String> availableZones = ZoneId .getAvailableZoneIds();
+        availableZones.forEach(System.out::println);
+    }     
+} 
+
+ */
+//Ex.3]
+/* import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Scanner;
+
+class DateTime{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a time zone (Asia/Tokyo):");
+        String zoneInput = sc.nextLine();
+
+        try {
+            ZoneId zone = ZoneId.of(zoneInput);
+            ZonedDateTime currentTime = ZonedDateTime.now(zone);
+            System.out.println("Time zone : "+zone);
+            System.out.println("Current Date and Time : "+ currentTime);
+        } catch (java.time.DateTimeException e) {
+            System.out.println("Invalid Time zone! Please enter a valid Time zone");
+        }
+        sc.close();
+    }
+} */
